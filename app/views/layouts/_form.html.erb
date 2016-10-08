@@ -1,8 +1,12 @@
 <%= form_for @article do |f| %>
 	<p><%= f.label :title %></p>
+	<div class="input-field col s12">
 	<%= f.text_field :title %>
+	</div>
 	<p><%= f.label :description %></p>
-	<%= f.text_area :description %>
+	<div class="input-field col s12">
+	<%= f.text_area :description, class: 'materialize-textarea' %>
+	</div>
 	<p><%= f.submit 'Submit', class: 'btn waves waves-effect' %></p>
 <% end %>
 
