@@ -29,6 +29,7 @@ class ArticlesController < ApplicationController
   		redirect_to action: 'index'
   	else
   		render 'edit'
+    end
   end
 
   def destroy
