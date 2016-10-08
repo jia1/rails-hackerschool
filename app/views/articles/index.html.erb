@@ -3,15 +3,16 @@
 
 <div class="col s12">
 <table class="highlight responsive-table">
+<% a = 0 %>
 <% @articles.each do |article| %>
 	<tr>
   <td><%= article.title %></td>
   <td>
 	<!-- Modal Trigger -->
-  <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
+  <a class="waves-effect waves-light btn modal-trigger" href=<%= "#modal#{a}".html_safe %>>Modal</a>
 
   <!-- Modal Structure -->
-  <div id="modal1" class="modal">
+  <div id=<%= "modal#{a}".html_safe %> class="modal">
     <div class="modal-content">
       <h4><%= article.title %></h4>
       <p><%= article.description %></p>
@@ -25,6 +26,7 @@
 	<%= link_to 'Delete', article_path(id: article), method: :delete, data: {confirm: "NO!!!!"}, class: 'btn waves waves-effect' %>
   </td>
   </tr>
+  <% a += 1 %>
 <% end %>
 </table>
 </div>
