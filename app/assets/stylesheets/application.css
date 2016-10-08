@@ -14,3 +14,14 @@
  *= require_self
  *= materialize
  */
+
+.btn, .btn-large {
+	background-color: pink;
+	color: gray;
+	font-weight: bold;
+}
+
+.btn:hover, .btn-large:hover {
+	background-color: pink;
+	color: white;
+}
